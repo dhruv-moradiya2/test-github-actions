@@ -42,4 +42,4 @@ jobs:
         run: echo $DEV_TEST
 
       - name: print date
-        run: hello,ji $DEV_TEST
+        run: hello,ji ${DEV_TEST}
