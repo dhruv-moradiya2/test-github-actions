@@ -27,7 +27,10 @@ jobs:
       - name: set all env
         env:
           DEV_NAME: ${{ secrets.DEV_NAME }}
-        run: echo $DEV_NAME
+        run: | 
+          echo $DEV_NAME
+          echo "$DEV_NAME" >> .env
+          cat .env
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
@@ -42,4 +45,4 @@ jobs:
         run: echo $DEV_TEST
 
       - name: print date
-        run: hello,ji ${DEV_TEST}
+        run: hello,ji ${{ env.DEV_TEST }}
