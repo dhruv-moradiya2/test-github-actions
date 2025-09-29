@@ -24,6 +24,11 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
 
+      - name: set all env
+        env:
+          DEV_NAME: ${{ secrets.DEV_NAME }}
+        run: echo $DEV_NAME
+
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
