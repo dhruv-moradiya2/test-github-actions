@@ -35,3 +35,11 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           echo Hello, $DEV_NAME
+
+      - name: print date
+        env:
+          DEV_TEST: ${{ vars.TEST_VARIABLE }}
+        run: echo $DEV_TEST
+
+      - name: print date
+        run: hello,ji $DEV_TEST
