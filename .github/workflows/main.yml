@@ -39,10 +39,10 @@ jobs:
           echo test, and deploy your project.
           echo Hello, $DEV_NAME
 
-      - name: print date
+      - name: print date 1
         env:
           DEV_TEST: ${{ vars.TEST_VARIABLE }}
         run: echo $DEV_TEST
 
-      - name: print date
+      - name: print date 2
         run: hello,ji ${{ env.DEV_TEST }}
