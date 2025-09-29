@@ -46,4 +46,4 @@ jobs:
         run: echo $DEV_TEST
 
       - name: print date 2
-        run: echo "hello,ji ${{ env.DEV_TEST }}"
+        run: echo "hello,ji ${{ vars.TEST_VARIABLE }}"
